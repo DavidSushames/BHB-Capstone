@@ -1,0 +1,27 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Sep  5 16:32:26 2026
+Invocation: foremost L0_Graphic.dd 
+Output directory: /home/bdsh/forensicEvidence/wkg/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: L0_Graphic.dd
+Start: Sat Sep  5 16:32:26 2026
+Length: 61 MB (64769536 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00056902.jpg 	      59 KB 	   29133824 	 
+1:	00126243.gif 	      35 KB 	   64636416 	  (907 x 907)
+2:	00010000.png 	      12 MB 	    5120000 	  (2580 x 1932)
+Finish: Sat Sep  5 16:32:26 2026
+
+3 FILES EXTRACTED
+	
+jpg:= 1
+gif:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Sep  5 16:32:26 2026
