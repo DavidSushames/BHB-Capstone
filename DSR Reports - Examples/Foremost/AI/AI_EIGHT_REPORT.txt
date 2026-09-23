@@ -1,0 +1,60 @@
+# FORENSIC ANALYSIS REPORT: DATA CARVING RESULTS
+**Case Reference:** EIGHT.dd Analysis  
+**Date of Report:** September 23, 2026  
+**Prepared By:** DFIR Reporting Assistant  
+
+---
+
+## 1. EXECUTIVE SUMMARY
+
+On September 23, 2026, at 13:08:16, a forensic data carving operation was p[1D[K
+performed on the disk image `EIGHT.dd` (241 MB) using the Foremost v1.5.7 t[1D[K
+toolset. The objective was to recover file fragments based on known file he[2D[K
+headers and footers. The process completed successfully at 13:08:19, yieldi[6D[K
+yielding a total of **44 recovered files**. The recovered data is primarily[9D[K
+primarily composed of graphical assets (PNG, JPG, GIF), document fragments [K
+(PDF, OLE), and compressed archives (ZIP, JAR).
+
+## 2. TECHNICAL ANALYSIS OF RECOVERED DATA
+
+### 2.1 File Type Distribution
+The carving process identified a diverse range of file signatures. The brea[4D[K
+breakdown of recovered artifacts is as follows:
+
+| File Format | Count | Characteristics |
+| :--- | :--- | :--- |
+| **PNG** | 18 | Small-scale assets; dimensions indicate UI/iconography. |
+| **JPG** | 12 | Photographic or compressed image data. |
+| **OLE** | 5 | Microsoft Office-related object linking/embedding fragments[9D[K
+fragments. |
+| **ZIP** | 4 | Compressed data archives. |
+| **GIF** | 4 | Animated or static graphic formats. |
+| **PDF** | 1 | Linearized document (web-optimized). |
+
+### 2.2 Artifact Characterization
+*   **Graphical Assets:** The majority of recovered files are image-based. [K
+The PNG files exhibit small dimensions (e.g., $128 \times 111$, $56 \times [K
+56$ pixels), suggesting they originate from application user interfaces, sy[2D[K
+system icons, or web browser caches.
+*   **Compressed/Application Data:** The recovery of a `.jar` file (554 KB)[3D[K
+KB) and multiple `.zip` files (up to 65 KB) indicates the presence of Java-[5D[K
+Java-based applications or bundled software components within the unallocat[9D[K
+unallocated space or file system structures.
+*   **Documentary Evidence:** A single 69 KB PDF was recovered. The "Linear[7D[K
+"Linearized" status of this file indicates it was structured for rapid web [K
+viewing, which may provide context regarding its original source (e.g., a d[1D[K
+downloaded document).
+
+## 3. DATA INTEGRITY AND OFFSETS
+Each recovered file was located at specific byte offsets within the `EIGHT.[7D[K
+`EIGHT.dd` image. These offsets (e.g., `7911936`, `19724800`) have been doc[3D[K
+documented to ensure the ability to validate the carving results and facili[6D[K
+facilitate further manual inspection of the raw hex data if required.
+
+## 4. CONCLUSION
+The carving operation successfully extracted 44 files from the `EIGHT.dd` i[1D[K
+image. The prevalence of small icons and compressed application components [K
+suggests the target disk may contain remnants of software installations or [K
+web-browsing activity. All recovered files are categorized by type and offs[4D[K
+offset for subsequent forensic examination.
+

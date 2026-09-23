@@ -1,0 +1,64 @@
+# FORENSIC ANALYSIS REPORT: FILE CARVING RESULTS
+
+**Date of Report:** September 23, 2026  
+**Case Reference:** Investigation of Image `Three.dd`  
+**Subject:** Summary of Carved Artifacts via Foremost  
+**Prepared By:** DFIR Reporting Assistant  
+
+---
+
+### **1. EXECUTIVE SUMMARY**
+
+On September 23, 2026, at 14:09:40, a forensic carving operation was perfor[6D[K
+performed on the disk image `Three.dd` (241 MB) using the Foremost version [K
+1.5.7 utility. The objective was to recover deleted or unallocated files ba[2D[K
+based on file header and footer signatures. The process was completed at 14[2D[K
+14:09:42, resulting in the successful extraction of 17 files across five di[2D[K
+distinct file formats.
+
+### **2. TECHNICAL ANALYSIS OF CARVED DATA**
+
+The carving process identified and reconstructed 17 artifacts. The distribu[8D[K
+distribution of recovered data is categorized by file type below:
+
+#### **2.1 Image Artifacts (9 Total)**
+*   **JPEG (.jpg):** 8 files were recovered. File sizes vary, with the larg[4D[K
+largest files reaching approximately 5 MB. These files were located at vari[4D[K
+various byte offsets within the image, such as offset `7946240`.
+*   **PNG (.png):** 1 file was recovered. Forensic metadata identifies this[4D[K
+this image with dimensions of **698 x 656** pixels.
+
+#### **2.2 Document and Data Artifacts (7 Total)**
+*   **OLE (Object Linking and Embedding):** 5 files were recovered. These a[1D[K
+artifacts are characterized by smaller file sizes, starting at approximatel[12D[K
+approximately 20 KB. OLE files are frequently associated with legacy Micros[6D[K
+Microsoft Office documents and may contain embedded objects or structured d[1D[K
+data.
+*   **PDF (.pdf):** 1 file was recovered. Analysis confirms the document is[2D[K
+is **Linearized**, indicating it was optimized for web viewing/fast web acc[3D[K
+access.
+
+#### **2.3 Compressed Archives (2 Total)**
+*   **ZIP (.zip):** 2 files were recovered. These archives represent compre[6D[K
+compressed data structures that may contain further nested files or directo[7D[K
+directories.
+
+### **3. DATA CHARACTERISTICS**
+
+| File Type | Count | Size Range | Key Observations |
+| :--- | :--- | :--- | :--- |
+| **JPG** | 8 | Up to 5 MB | Identified via standard JPEG headers. |
+| **OLE** | 5 | ~20 KB | Potential document/metadata containers. |
+| **ZIP** | 2 | Variable | Compressed archives identified. |
+| **PNG** | 1 | Variable | Dimensions: 698 x 656. |
+| **PDF** | 1 | Variable | Linearized format. |
+
+### **4. CONCLUSION**
+
+The carving operation successfully retrieved a diverse set of files from th[2D[K
+the `Three.dd` image. The presence of both high-resolution images (JPG) and[3D[K
+and structured documents (OLE, PDF) suggests a variety of user-generated co[2D[K
+content within the unallocated space. All recovered files were mapped to sp[2D[K
+specific byte offsets, ensuring the integrity of their location within the [K
+source disk image.
+
